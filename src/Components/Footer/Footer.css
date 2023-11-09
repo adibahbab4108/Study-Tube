@@ -1,0 +1,17 @@
+.footer{
+    border-radius:5px
+}
+.footer li {
+  list-style: none;
+}
+.footer li a {
+  text-decoration: none;
+}
+.contact-us {
+    
+}
+.follow-us i {
+  font-size: 40px;
+  margin: 0 10px;
+  
+}
