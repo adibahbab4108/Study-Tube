@@ -26,17 +26,21 @@ const Semester = ({ semester }) => {
           </ol>
         </div>
       </div>
-      <div className="playlist border">
+      <div className="playlist-container border">
         <h3>Playlist</h3>
-        <ol>
-          {playlist.map((video) => (
-            <div>
-              {console.log(video)}
-              <li key={video.id} onClick={() => setUrl(video.url)}>{video.title}</li>
-            </div>
-          ))}
-        </ol>
-        <div className="video-box">
+        <div className="playlists">
+          <ol>
+            {playlist.map((video) => (
+              <div>
+                {console.log(video)}
+                <li key={video.id} onClick={() => setUrl(video.url)}>
+                  {video.title}
+                </li>
+              </div>
+            ))}
+          </ol>
+        </div>
+        <div className="playlist-video">
           <ReactPlayer
             url={url}
             className="display-video"

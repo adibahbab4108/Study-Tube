@@ -1,8 +1,18 @@
-.video-box{
-    width:200px;
-    height:200px;
-    border:1px solid red;
+.playlist-container {
+  display: flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
-.display-video{
-    width:100%;
+.playlists {
+  background: red;
+  color: white;
+  border: 1px solid red;
+  width: 30%;
+  height: 30vh;
+  overflow: auto;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 15px;
+}
+.playlist-video {
+  width: 70%;
 }

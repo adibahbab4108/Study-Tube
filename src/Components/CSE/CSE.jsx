@@ -13,15 +13,17 @@ const CSE = ({ department }) => {
       <h1>Department Of Computer Science and Engineering</h1>
       <div className="semester-parent">
         {semesters.map((semester) => (
-          <h3
-            key={semester.number}
-            className="semester-name"
-            onClick={() => {
-              handleSemesterClick(semester);
-            }}
-          >
-            Semester {semester.number}
-          </h3>
+          <div className="semester-child">
+            <h5
+              key={semester.number}
+              className="semester-name"
+              onClick={() => {
+                handleSemesterClick(semester);
+              }}
+            >
+              Semester {semester.number}
+            </h5>
+          </div>
         ))}
       </div>
       <div>{selectedSemester && <Semester semester={selectedSemester} />}</div>
