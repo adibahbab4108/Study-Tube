@@ -1,32 +1,31 @@
 import { useState } from "react";
-import "../CSE/CSE.css";
-import coverImg from "../../assets/CSE/CSE.jpeg";
-import semesters from "../../assets/semester";
 import Semester from "../Semester/Semester";
-const CSE = () => {
-  const [data, setData] = useState(semesters);
+import "../CSE/CSE.css";
+const CSE = ({ department }) => {
+  const { name, semesters } = department;
+  const [selectedSemester, setSelectedSemester] = useState(null);
 
-  const handleClick = (sems) => {
-    console.log(sems.courses + " clicked");
+  const handleSemesterClick = (semester) => {
+    setSelectedSemester(semester);
   };
-
   return (
-    <>
-      <div className="container">
-        <div className="cse-cover">
-          <img src={coverImg} alt="cover" />
-        </div>
-        <div className="my-3 text-center row">
-          {data.map((semester) => (
-            <Semester
-              key={semester.id}
-              semester={semester}
-              handleClick={handleClick}
-            ></Semester>
-          ))}
-        </div>
+    <div>
+      <h1>Department Of Computer Science and Engineering</h1>
+      <div className="semester-parent">
+        {semesters.map((semester) => (
+          <h3
+            key={semester.number}
+            className="semester-name"
+            onClick={() => {
+              handleSemesterClick(semester);
+            }}
+          >
+            Semester {semester.number}
+          </h3>
+        ))}
       </div>
-    </>
+      <div>{selectedSemester && <Semester semester={selectedSemester} />}</div>
+    </div>
   );
 };
 

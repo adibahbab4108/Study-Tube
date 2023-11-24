@@ -1,22 +1,17 @@
-import React, { useState } from "react";
-import Semester from "../Semester/Semester";
-import EEE_Data from "../../assets/EEE/1st/Electrical Circuits I/EC_I";
-const EEE = () => {
-  const [data,setData]=useState(EEE_Data);
-
-  const handleClick = (sems) => {
-    console.log(sems.courses + " clicked");
-  };
-  console.log(data[0].title);//worikih
+import "../CSE/CSE.css";
+const EEE = ({ department }) => {
+  const { name, semesters } = department;
   return (
-    <>
-      <Semester
-        key={EEE_Data.id}
-        semester={EEE_Data}
-        handleClick={handleClick}
-      />
-    </>
+    <div>
+      <h1>Department Of Electric and Electronic Engineering</h1>
+      <div>
+        {semesters.map((semester) => (
+          <h3 key={semester.number}> Semester  {semester.number}</h3>
+        ))}
+      </div>
+    </div>
   );
+  
 };
 
 export default EEE;

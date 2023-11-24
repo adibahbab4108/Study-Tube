@@ -1,10 +1,10 @@
-import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import "./Header.css";
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-light">
       <div className="container">
-        <Link to='/' className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand" href="#">
           StudyTube
         </Link>
         <button
@@ -21,41 +21,19 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to='/' className="nav-link active" aria-current="page" href="#">
+              <Link
+                to="/"
+                className="nav-link active"
+                aria-current="page"
+                href="#"
+              >
                 Home
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Department
-              </a>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <Link to='/cse' className="dropdown-item" href="#">
-                    CSE
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/eee' className="dropdown-item" href="#">
-                    EEE
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/ete' className="dropdown-item" href="#">
-                    ETE
-                  </Link>
-                </li>
-              </ul>
+            <li className="nav-item">
+              <Link to="/department" className="nav-link active"
+                aria-current="page"
+                href="#"> Department </Link>
             </li>
           </ul>
           <button className="btn btn-success ms-auto">Login</button>

@@ -1,6 +1,4 @@
-.cse-cover{
-  
-}
-.cse-cover img{
-    width:100%;
+.active-style{
+    color:green;
+    background:blue;
 }

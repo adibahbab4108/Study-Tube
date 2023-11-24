@@ -7,22 +7,25 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
+  useParams
 } from "react-router-dom";
+import Department from "./Components/Department/Department.jsx";
+import departments from "./assets/departments.js";
 import Home from "./Components/Home/Home.jsx";
 import CSE from "./Components/CSE/CSE.jsx";
 import EEE from "./Components/EEE/EEE.jsx";
 import ETE from "./Components/ETE/ETE.jsx";
-import ShowSemester from "./Components/ShowSemester/ShowSemester.jsx";
+import Semester from "./Components/Semester/Semester.jsx";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
-      <Route path="cse">
-        <Route index element={<CSE />} />
-        <Route path="semester/:semesterId" element={<ShowSemester />} />
-      </Route>
-      <Route path="eee" element={<EEE />} />
-      <Route path="ete" element={<ETE />} />
+      <Route index path="" element={<Home />} />
+      <Route path="department" element={<Department departments={departments} />}/>
+      <Route path="/department/cse" element={<CSE department={departments[0]} />} />
+      <Route path="/department/eee" element={<EEE department={departments[1]} />} />
+      <Route path="/department/ete" element={<ETE department={departments[2]} />} />
+
     </Route>
   )
 );
