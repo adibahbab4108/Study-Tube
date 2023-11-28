@@ -2,8 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light">
-      <div className="container">
+    <nav className="navbar navbar-expand-sm navbar-light bg-light">
+      <div className="container-xl">
         <Link to="/" className="navbar-brand" href="#">
           StudyTube
         </Link>

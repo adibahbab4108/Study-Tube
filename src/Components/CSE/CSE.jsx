@@ -10,7 +10,7 @@ const CSE = ({ department }) => {
   };
   return (
     <div>
-      <h1>Department Of Computer Science and Engineering</h1>
+      <h1 className="text-center">Department Of Computer Science and Engineering</h1>
       <div className="semester-parent">
         {semesters.map((semester) => (
           <div className="semester-child">

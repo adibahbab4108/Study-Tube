@@ -1,18 +1,30 @@
 .playlist-container {
   display: flex;
-  gap:10px;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  border: 3px solid red;
+  flex-direction:row-reverse;
+  height: 500px;
+  justify-content: space-between;
+  align-items:center;
 }
 .playlists {
   background: red;
   color: white;
   border: 1px solid red;
   width: 30%;
-  height: 30vh;
+  height: 100%;
   overflow: auto;
   box-shadow: 5px 5px 5px gray;
   border-radius: 15px;
+  border: 3px solid black;
 }
 .playlist-video {
-  width: 70%;
+  width: 50%;
+  height: 100%;
+  border: 3px solid green;
+  border-radius: 15px;
+  overflow:hidden;
+}
+.react-player {
+  width: 100%;
 }

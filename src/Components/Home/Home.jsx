@@ -4,7 +4,7 @@ import featureImage from "../../assets/featureImg1.jpg";
 const Home = () => {
   return (
     <>
-      <div className="container mt-5">
+      <div className="container-xl mt-5">
         {/* ........top........ */}
         <div className="home-top shadow p-3 rounded">
           <div>

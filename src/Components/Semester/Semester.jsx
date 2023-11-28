@@ -7,9 +7,9 @@ const Semester = ({ semester }) => {
   const [playlist, setPlaylist] = useState([]);
   const [url, setUrl] = useState();
   return (
-    <div>
-      <h1>Semester {semesterNumber}</h1>
-      <div className="courses border">
+    <div className="container-fluid">
+      <h1 className="text-center">Semester {semesterNumber}</h1>
+      <div className="courses">
         <div className="course-name">
           <h3>Courses</h3>
           <ol>
@@ -26,9 +26,9 @@ const Semester = ({ semester }) => {
           </ol>
         </div>
       </div>
-      <div className="playlist-container border">
-        <h3>Playlist</h3>
+      <div className="playlist-container">
         <div className="playlists">
+          <h3>Playlist</h3>
           <ol>
             {playlist.map((video) => (
               <div>
@@ -40,11 +40,15 @@ const Semester = ({ semester }) => {
             ))}
           </ol>
         </div>
-        <div className="playlist-video">
+        <div className="playlist-video col-sm-12">
+          {/* <h3>Select from playlist</h3> */}
           <ReactPlayer
             url={url}
-            className="display-video"
+            className="react-player"
             control="true"
+            width="100%"
+            height="100%"
+            wrapper="div"
           ></ReactPlayer>
         </div>
       </div>
