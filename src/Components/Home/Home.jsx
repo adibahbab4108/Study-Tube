@@ -6,14 +6,26 @@ const Home = () => {
     <>
       <div className="container-xl mt-5">
         {/* ........top........ */}
-        <div className="home-top shadow p-3 rounded">
+        <div className="home-top shadow rounded">
           <div>
-            <h1>Hassle-free Learning</h1>
-            <p>Don't Get Distract From Your Study</p>
+            {" "}
+            <h1>
+              An YouTube based platform of
+              <br /> learning{" "}
+            </h1>
+          </div>
+          <div className="home-top-floating p-3 rounded">
+            <div className="home-top-floating-content">
+              <h1 className="animated-text">
+                Learn <br />
+                <span></span>{" "}
+              </h1>
+              <p>Do not Get Distract From Your Study</p>
+            </div>
           </div>
         </div>
         {/* .........mddile........... */}
-        <div className="home-middle shadow rounded p-3 mt-5 ">
+        <div className="home-middle shadow rounded p-3 ">
           <h1>Features</h1>
           <div className="row row-cols-1 row-cols-md-3 g-4 ">
             <div className="col">

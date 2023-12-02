@@ -1,17 +1,115 @@
 .home-top {
-  height: 80vh;
+  height: 50vh;
   background: linear-gradient(130deg, white, green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-image: url(../../assets/homeBg.jpg);
-  background-repeat:no-repeat;
-  background-size:cover; */
+  position: relative;
   text-align: center;
+}
+.home-top-floating {
+  width: 80%;
+  height: 50vh;
+  background: linear-gradient(130deg, green, white);
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-top-floating-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+.home-top-floating-content span {
+  font-size: 50px;
+}
+.home-top-floating-content p {
+  margin-top: 70px;
+  font-size:17px;
+  text-align:center;
 }
 .home h1 {
   font-weight: 600;
   font-size: 50px;
 }
 .home-middle {
+  margin-top: 190px;
+}
+/* ........text-animation......... */
+.animated-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.animated-text span {
+  position: relative;
+}
+
+.animated-text span::before {
+  content: "Youtuber";
+  color: #fff;
+  animation: words 20s infinite;
+}
+
+.animated-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #2f3542;
+  border-left: 2px solid #ff7f50;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "hassle-free";
+  }
+  41%,
+  60% {
+    content: "flawlessly";
+  }
+  61%,
+  80% {
+    content: "interactively";
+  }
+  81%,
+  100% {
+    content: "fruitfully";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
 }
