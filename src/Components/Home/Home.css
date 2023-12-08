@@ -1,15 +1,18 @@
 .home-top {
   height: 50vh;
-  background: linear-gradient(130deg, white, green);
+  background:url("../../assets/home-cover.jpg") no-repeat;
+  background-size:cover;
   position: relative;
   text-align: center;
+  color:white;
+  padding: 30px;
 }
 .home-top-floating {
   width: 80%;
   height: 50vh;
-  background: linear-gradient(130deg, green, white);
+  background: linear-gradient(130deg, #01274C, white);
   position: absolute;
-  bottom: -80%;
+  bottom: -90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -28,14 +31,21 @@
   font-size:17px;
   text-align:center;
 }
-.home h1 {
+.home-top>h1 {
   font-weight: 600;
-  font-size: 50px;
+  font-size: 40px;
 }
+/* .................home-middle.................. */
 .home-middle {
-  margin-top: 190px;
+  margin-top: 240px;
+  background: linear-gradient(130deg, #01274C, white);
 }
-/* ........text-animation......... */
+.home-middle>h1{
+  color:white;
+  margin-bottom:35px;
+}
+
+/* ........home-text-animation......... */
 .animated-text {
   font-size: 34px;
   font-weight: 600;

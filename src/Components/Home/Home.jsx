@@ -1,36 +1,34 @@
 import React from "react";
 import "./Home.css";
-import featureImage from "../../assets/featureImg1.jpg";
+import featureImage1 from "../../assets/featureImg1.jpg";
+import featureImage2 from "../../assets/responsive.jpg";
+import featureImage3 from "../../assets/home-cover.jpg";
 const Home = () => {
   return (
     <>
       <div className="container-xl mt-5">
         {/* ........top........ */}
-        <div className="home-top shadow rounded">
-          <div>
-            {" "}
-            <h1>
-              An YouTube based platform of
-              <br /> learning{" "}
-            </h1>
-          </div>
-          <div className="home-top-floating p-3 rounded">
+        <div className="home-top shadow-lg rounded">
+          <h1>
+            An YouTube based <br /> <span>learning platform</span>
+          </h1>
+          <div className="home-top-floating p-3 rounded shadow-lg">
             <div className="home-top-floating-content">
               <h1 className="animated-text">
                 Learn <br />
-                <span></span>{" "}
+                <span></span>
               </h1>
               <p>Do not Get Distract From Your Study</p>
             </div>
           </div>
         </div>
         {/* .........mddile........... */}
-        <div className="home-middle shadow rounded p-3 ">
+        <div className="home-middle shadow-lg rounded p-4 ">
           <h1>Features</h1>
-          <div className="row row-cols-1 row-cols-md-3 g-4 ">
+          <div className="row row-cols-1 row-cols-md-3 g-4 p-3">
             <div className="col">
               <div className="card h-100">
-                <img src={featureImage} className="card-img-top" alt="..." />
+                <img src={featureImage1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Interactive Video Lectures</h5>
                   <p className="card-text">
@@ -43,7 +41,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src={featureImage} className="card-img-top" alt="..." />
+                <img src={featureImage2} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Mobile-Friendly Design</h5>
                   <p className="card-text">
@@ -56,7 +54,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src={featureImage} className="card-img-top" alt="..." />
+                <img src={featureImage3} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Sorted And Organized</h5>
                   <p className="card-text">

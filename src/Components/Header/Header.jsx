@@ -36,7 +36,7 @@ const Header = () => {
                 href="#"> Department </Link>
             </li>
           </ul>
-          <button className="btn btn-success ms-auto">Login</button>
+          <button className="btn ms-auto">Login</button>
         </div>
       </div>
     </nav>
